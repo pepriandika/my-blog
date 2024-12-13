@@ -19,7 +19,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
   margin: 0;
 }
 
@@ -27,6 +26,6 @@
 main {
   flex: 1; /* Membuat main mengambil ruang yang tersisa */
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #d6e2ed;
 }
 </style>
