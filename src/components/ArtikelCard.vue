@@ -68,7 +68,8 @@ function onReadMore() {
 
 .card-image {
   position: relative;
-  max-width: 42%;
+  max-width: 400px;
+  max-height: 300px;
   border: 5px solid #61acc0;
   border-radius: 8px;
 }

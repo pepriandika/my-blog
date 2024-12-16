@@ -19,11 +19,11 @@ const icons = ref([
       <img src="../assets/logo.png" alt="logo" class="logo"/>
       <nav>
         <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/blog">Blog</router-link></li>
-          <li><router-link to="/portfolio">Portfolio</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
+          <li><router-link class="menu" to="/">Home</router-link></li>
+          <li><router-link class="menu" to="/about">About</router-link></li>
+          <li><router-link class="menu" to="/blog">Blog</router-link></li>
+          <li><router-link class="menu" to="/portfolio">Portfolio</router-link></li>
+          <li><router-link class="menu" to="/contact">Contact</router-link></li>
         </ul>
       </nav>
       <div>
@@ -33,7 +33,7 @@ const icons = ref([
             v-for="(icon, index) in icons"
             :key="index"
             :href="icon.url"
-            class="mx-0"
+            class="mx-0 hover-button"
             size="medium"
             variant="outlined"
             color="#61acc0"
@@ -53,7 +53,6 @@ const icons = ref([
 <style scoped>
 /* Styling */
 header {
-  background-color: #faf9f9;
   padding: 1rem 2rem;
 }
 
@@ -85,4 +84,15 @@ nav a.router-link-active {
   padding: 0.5rem;
   border-radius: 5px;
 }
+
+.hover-button {
+  transition: background-color 0.3s ease; /* Tambahkan animasi */
+}
+
+.hover-button:hover {
+  background-color: #5aa5c8; /* Warna hover */
+  color: #ffffff !important;
+}
+
+
 </style>
