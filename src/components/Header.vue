@@ -69,17 +69,24 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 16px;
 }
 
 nav a {
   text-decoration: none;
   color: #1a1e1e;
+  padding: 0.5rem;
+}
+
+nav .menu:hover {
+  background-color: rgba(97, 172, 192, 0.67);
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 nav a.router-link-active {
   background-color: #61acc0;
-  font-weight: bold;
   color: #ffffff;
   padding: 0.5rem;
   border-radius: 5px;
