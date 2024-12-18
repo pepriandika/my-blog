@@ -1,13 +1,15 @@
 <script setup>
 
 const props = defineProps({
+  id: {
+    type: Number,
+    required: true,
+  },
   imageSrc: {
     type: String,
-    required: true,
   },
   imageAlt: {
     type: String,
-    default: "Image",
   },
   title: {
     type: String,
@@ -23,19 +25,14 @@ const props = defineProps({
   },
   category: {
     type: String,
-    default: "Story",
   },
   description: {
     type: String,
-    required: true,
+  },
+  contentFile: {
+    type: String,
   },
 });
-
-const emit = defineEmits(["read-more"]);
-
-function onReadMore() {
-  emit("read-more");
-}
 </script>
 
 <template>
@@ -51,7 +48,7 @@ function onReadMore() {
         <span class="date">{{ date }}</span>
       </div>
       <p class="card-description">{{ description }}</p>
-      <button class="read-more" @click="onReadMore">Read More</button>
+      <button class="read-more">Read More</button>
     </div>
   </div>
 </template>

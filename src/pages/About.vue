@@ -1,3 +1,13 @@
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goBack = () => {
+  router.back(); // Kembali ke halaman sebelumnya
+};
+</script>
+
 <template>
   <div>
     <h1>About Page</h1>
@@ -6,20 +16,4 @@
   </div>
 </template>
 
-<script>
-import { useRouter } from 'vue-router';
 
-export default {
-  setup() {
-    const router = useRouter();
-
-    const goBack = () => {
-      router.back(); // Kembali ke halaman sebelumnya
-    };
-
-    return {
-      goBack,
-    };
-  },
-};
-</script>

@@ -2,7 +2,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../pages/Home.vue';
 import About from '../pages/About.vue';
-import Portfolio from "../pages/Portfolio.vue";
+import Projects from "../pages/Projects.vue";
+import Blog from "@/pages/Blog.vue";
+import Post from "@/pages/Post.vue";
+import Contact from "@/pages/Contact.vue";
 
 const routes = [
     {
@@ -18,17 +21,23 @@ const routes = [
     {
         path: '/blog',
         name: 'Blog',
-        component: About,
+        component: Blog,
     },
     {
-        path: '/portfolio',
-        name: 'Portfolio',
-        component: Portfolio,
+        path: '/projects',
+        name: 'Projects',
+        component: Projects,
     },
     {
         path: '/contact',
         name: 'Contact',
-        component: About,
+        component: Contact,
+    },
+    {
+        path: '/post/:id',
+        name: 'Post',
+        component: Post,
+        props: true, // Kirim parameter id sebagai props
     },
 ];
 

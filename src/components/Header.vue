@@ -22,7 +22,7 @@ const icons = ref([
           <li><router-link class="menu" to="/">Home</router-link></li>
           <li><router-link class="menu" to="/about">About</router-link></li>
           <li><router-link class="menu" to="/blog">Blog</router-link></li>
-          <li><router-link class="menu" to="/portfolio">Portfolio</router-link></li>
+          <li><router-link class="menu" to="/projects">Projects</router-link></li>
           <li><router-link class="menu" to="/contact">Contact</router-link></li>
         </ul>
       </nav>
