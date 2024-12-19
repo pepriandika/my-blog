@@ -44,7 +44,7 @@ const props = defineProps({
       <span class="category">{{ category }}</span>
       <h3 class="card-title">{{ title }}</h3>
       <div class="card-meta">
-        <span class="author">By {{ author }}</span>
+        <span class="author">By {{ author }}</span> |
         <span class="date">{{ date }}</span>
       </div>
       <p class="card-description">{{ description }}</p>

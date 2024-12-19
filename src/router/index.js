@@ -37,7 +37,7 @@ const routes = [
         path: '/post/:id',
         name: 'Post',
         component: Post,
-        props: true, // Kirim parameter id sebagai props
+        props: true,
     },
 ];
 
