@@ -1,6 +1,8 @@
 <script setup>
 import { useRoute } from "vue-router";
 import Articles from "@/assets/Articles.json";
+import Aboutme from "@/components/sidebar/Aboutme.vue";
+
 
 const article = Articles;
 
@@ -21,7 +23,7 @@ const content = article[parseInt(postId) -1 ].contentFile
         </div>
       </v-col>
       <v-col cols="3">
-
+        <Aboutme/>
       </v-col>
     </v-row>
   </div>
