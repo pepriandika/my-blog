@@ -1,10 +1,12 @@
 <script setup>
-
+defineProps({
+  msg: String
+})
 </script>
 
 <template>
   <div class="sidebar-search">
-    <div class="sidebar-search-label">Cari</div>
+    <div class="sidebar-search-label">{{ msg }}</div>
     <slot></slot>
   </div>
 </template>
