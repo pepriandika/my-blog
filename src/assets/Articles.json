@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "imageSrc": "https://pepriandika.me/wp-content/uploads/2024/06/asset11-1024x768.png",
+    "title": "Saya Memilih Berprofesi di Bidang IT Karena...",
+    "author": "pepriandika",
+    "date": "Juni 28, 2024",
+    "category": "Blog",
+    "description": "Informasi lengkap mengenai syarat dan ketentuan beasiswa belajar teknologi.",
+    "contentFile": "<p>ini adalah \n <b>body</b> content   aaa <br/> wagawgawgaw </p>"
+  },
+  {
+    "id": 2,
+    "imageSrc": "https://pepriandika.me/wp-content/uploads/2024/06/asset11-1024x768.png",
+    "title": "Awal kisah aku memulai belajar Ngoding",
+    "author": "pepriandika",
+    "date": "Juni 29, 2024",
+    "category": "Blog",
+    "description": "Informasi lengkap mengenai syarat dan ketentuan beasiswa belajar teknologi.",
+    "contentFile": "<p>ini adalah body content abb</p>"
+  }
+]
