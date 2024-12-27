@@ -3,8 +3,10 @@ import { useRouter } from 'vue-router';
 import ArticleCard from "@/components/ArticleCard.vue"; // Import router hook
 import Articles from "@/assets/Articles.json";
 import Search from "@/components/sidebar/Search.vue";
-import Aboutme from "@/components/sidebar/Aboutme.vue";
+import AboutMe from "@/components/sidebar/AboutMe.vue";
 import RecentPost from "@/components/sidebar/RecentPost.vue";
+import Category from "@/components/sidebar/Category.vue";
+
 const articles = Articles;
 
 const router = useRouter();
@@ -16,6 +18,7 @@ const navigateToPost = (id) => {
 </script>
 
 <template>
+
   <div>
     <v-row no-gutters>
       <v-col cols="9">
@@ -36,10 +39,13 @@ const navigateToPost = (id) => {
         <Search/>
         <br/>
         <br/>
-        <Aboutme/>
+        <AboutMe/>
         <br/>
         <br/>
         <RecentPost :title="articles" />
+        <br/>
+        <br/>
+        <Category :category="articles"/>
       </v-col>
     </v-row>
   </div>

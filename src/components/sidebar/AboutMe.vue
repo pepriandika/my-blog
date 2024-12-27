@@ -20,8 +20,8 @@ import BorderLabel from "@/components/sidebar/BorderLabel.vue";
   display: flex;
 }
 .circular-img {
-  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
-  display: inline-block;     /* Opsional: untuk menghindari margin bawaan */
+  border-radius: 50%; 
+  display: inline-block;    
 }
 
 div .name{

@@ -9,16 +9,19 @@ const props = defineProps({
   }
 });
 
-const router = useRouter(); // gunakan useRouter()
+const router = useRouter();
 
 const navigateToPost = (index) => {
-  router.push(`/post/${props.title[index].id}`); // Navigasi ke halaman lain
+  router.push(`/post/${props.title[index].id}`);
 };
 </script>
 
 <template>
   <BorderLabel msg="Recent Post">
-    <p v-for="(item, index) in title.slice(0, 5)" :key="index" @click="navigateToPost(index)"><b>{{ item.title }}</b>
+    <p v-for="(item, index) in title.slice(0, 5)"
+       :key="index"
+       @click="navigateToPost(index)">
+      <b>{{ item.title }}</b>
       <br/>
       <hr>
     </p>
