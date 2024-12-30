@@ -1,6 +1,6 @@
 <script setup>
 import BorderLabel from "@/components/sidebar/BorderLabel.vue";
-import {computed, ref} from "vue";
+import { computed, ref } from "vue";
 
 const props = defineProps({
   category: {
@@ -9,7 +9,7 @@ const props = defineProps({
   }
 });
 
-const uniqueTitles= computed(() => {
+const uniqueTitles = computed(() => {
   const seen = new Set();
   return props.category
       .map(item => item.category)
@@ -35,41 +35,70 @@ function hideBullet(index) {
 <template>
   <BorderLabel msg="Category">
     <div>
-      <div
-        v-for="(item,index) in uniqueTitles"
-        :key="index"
-      >
-        <p @mouseenter="showBullet(index)" @mouseleave="hideBullet(index)">
-          <span class="bullet" :style="{ display: visibleBullets[index] ? 'inline' : 'none' }">●</span>
-          <span class="category-name">{{ item }}</span>
-        </p>
-        <hr/>
+      <div>
+        <ul>
+          <li v-for="(item, index) in uniqueTitles"
+              :key="index"
+              :class="{'border-top': index >= 1}"
+              class="category-name"
+              @mouseover="showBullet(index)"
+              @mouseleave="hideBullet(index)">
+            <span class="bullet" :class="{ 'visible': visibleBullets[index] }">●</span>
+            <a href="#">{{ item }}</a>
+          </li>
+        </ul>
       </div>
     </div>
   </BorderLabel>
 </template>
 
 <style scoped>
-hr {
-  opacity: 0.2;
-  margin-top: 15px;
-  margin-bottom: 15px;
+ul {
+  list-style-type: none;
 }
 
-.category-name:hover {
-  transition: color 0.3s ease;
-  color: #61acc0;
-  text-decoration: underline;
+a {
+  text-decoration: none;
+  color: #1a1e1e;
+  transition: margin-left 0.3s ease; /* Transisi untuk mendorong teks */
+}
+
+li {
+  position: relative; /* Untuk posisi bullet */
+  padding: 10px 0;
 }
 
 .bullet {
-  color: #61acc0;
-  text-decoration: none;
-  padding: 0;
-  margin-right: 1rem;
+  position: absolute;
+  left: 0; /* Posisi awal bullet lebih jauh ke kiri */
+  opacity: 0; /* Mulai dengan tidak terlihat */
+  transform: translateX(-20px); /* Geser sedikit ke kanan */
+  transition: opacity 0.5s ease, transform 0.3s ease; /* Transisi untuk bullet */
 }
 
-p {
-  height: 2rem;
+.bullet.visible {
+  opacity: 1; /* Menjadi terlihat saat hover */
+  transform: translateX(0); /* Geser ke posisi normal */
+}
+
+.category-name:hover a {
+  margin-left: 20px; /* Mendorong teks ke kanan saat bullet muncul */
+}
+
+li:hover {
+  color: #61acc0;
+}
+
+.category-name {
+  color: #1a1e1e;
+}
+
+.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+  color: #61acc0;
+  text-decoration: underline;
 }
 </style>

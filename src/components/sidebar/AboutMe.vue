@@ -11,7 +11,7 @@ import BorderLabel from "@/components/sidebar/BorderLabel.vue";
     <br/>
     <p>Halo! Nama saya Pepri Andika, bekerja dari Palembang.
       <i>InsyaAllah</i>, Saya akan berbagi pengalaman pribadi, hasil belajar,
-      dan proyek-proyek sederhana dalam dunia programming.</p>
+      dan proyek-proyek sederhana dalam dunia programming. <a href="#">Selengkapnya...</a></p>
   </BorderLabel>
 </template>
 
@@ -20,13 +20,18 @@ import BorderLabel from "@/components/sidebar/BorderLabel.vue";
   display: flex;
 }
 .circular-img {
-  border-radius: 50%; 
-  display: inline-block;    
+  border-radius: 50%;
+  display: inline-block;
 }
 
 div .name{
   display: inline;
   margin-left: 10px;
+}
+
+a {
+  color: #4a8d9e;
+  text-decoration: none;
 }
 
 </style>

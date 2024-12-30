@@ -20,23 +20,26 @@ const navigateToPost = (index) => {
   <BorderLabel msg="Recent Post">
     <p v-for="(item, index) in title.slice(0, 5)"
        :key="index"
+       :class="{'border-top': index >= 1}"
        @click="navigateToPost(index)">
       <b>{{ item.title }}</b>
       <br/>
-      <hr>
     </p>
   </BorderLabel>
 </template>
 
 <style scoped>
-hr{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  opacity: 10%;
+p {
+  padding: 10px 0;
 }
+
 p:hover {
   color: #61acc0;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.border-top {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 </style>

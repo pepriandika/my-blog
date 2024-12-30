@@ -16,7 +16,9 @@ const icons = ref([
 <template>
   <header>
     <div class="logo-nav">
-      <img src="../assets/logo.png" alt="logo" class="logo"/>
+      <router-link to="/">
+        <img src="../assets/logo.png" alt="logo" class="logo">
+      </router-link>
       <nav>
         <ul>
           <li><router-link class="menu" to="/">Home</router-link></li>
