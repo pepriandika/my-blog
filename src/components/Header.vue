@@ -15,7 +15,7 @@ const icons = ref([
 
 <template>
   <header>
-    <div class="logo-nav">
+    <div class="logo-nav v-container">
       <router-link to="/">
         <img src="../assets/logo.png" alt="logo" class="logo">
       </router-link>

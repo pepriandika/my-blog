@@ -19,7 +19,7 @@ const navigateToPost = (id) => {
 
 <template>
 
-  <div>
+  <div class="v-container">
     <v-row no-gutters>
       <v-col cols="9">
         <ArticleCard
