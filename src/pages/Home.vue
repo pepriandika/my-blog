@@ -1,5 +1,6 @@
 <script setup>
-import { useRouter } from 'vue-router';
+// import { useRouter } from 'vue-router';
+
 import ArticleCard from "@/components/ArticleCard.vue"; // Import router hook
 import Articles from "@/assets/Articles.json";
 import Search from "@/components/sidebar/Search.vue";
@@ -9,11 +10,11 @@ import Category from "@/components/sidebar/Category.vue";
 
 const articles = Articles;
 
-const router = useRouter();
+// const router = useRouter();
 
-const navigateToPost = (id) => {
-  router.push(`/post/${id}`); // Navigasi ke halaman lain
-};
+// const navigateToPost = (id) => {
+//   router.push(`/post/${id}`); // Navigasi ke halaman lain
+// };
 
 </script>
 

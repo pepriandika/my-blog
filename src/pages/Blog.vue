@@ -1,19 +1,26 @@
 <script setup>
-import { useRouter } from 'vue-router';
+import Article from '../assets/Articles.json';
+import ArticleCard from "@/components/ArticleCard.vue";
 
-const router = useRouter();
+const articles = Article.filter(article => article.category !== "Portfolio");
 
-const goBack = () => {
-  router.back(); // Kembali ke halaman sebelumnya
-};
 </script>
 
 <template>
-  <div>
-    <h1>Blog Page</h1>
-    <p>Ini adalah halaman Blog.</p>
-    <button @click="goBack">Kembali ke Blog</button>
-  </div>
+  <v-container>
+    <ArticleCard
+        v-for="article in articles"
+        :key="article.id"
+        :image-src="article.imageSrc"
+        :title="article.title"
+        :author="article.author"
+        :date="article.date"
+        :category="article.category"
+        :description="article.description"
+        :id="article.id"
+        @click="navigateToPost(article.id)"
+    />
+  </v-container>
 </template>
 
 

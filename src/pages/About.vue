@@ -40,23 +40,16 @@ const goContact=() => {
 <style scoped>
 .about-photo {
   flex-grow: 0;
-  border-radius: 2px !important;
-  border-color: #4a8d9e;
 }
 
 .border-photo {
   position: relative;
   width: 400px;
   height: 400px;
-  border: 2px black solid;
   display: flex;
-  /* Gunakan Flexbox */
   justify-content: center;
-  /* Pusatkan secara horizontal */
   align-items: center;
-  /* Pusatkan secara vertikal */
   border-radius: 50%;
-  /* Pastikan gambar tidak keluar dari lingkaran */
 }
 
 .my-photo {
@@ -64,9 +57,7 @@ const goContact=() => {
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  /* Sesuaikan tinggi dengan lebar untuk menjaga proporsi */
   transition: all 0.1s ease-in-out;
-  /* Animasi hover */
   opacity: 70%;
 }
 
