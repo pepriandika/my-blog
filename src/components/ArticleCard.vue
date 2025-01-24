@@ -1,4 +1,5 @@
 <script setup>
+import {useRouter} from "vue-router";
 
 const props = defineProps({
   id: {
@@ -34,7 +35,11 @@ const props = defineProps({
   },
 });
 
+const router = useRouter();
 
+const navigateToArticle = () => {
+  router.push(`/post/${props.id}`);
+}
 
 </script>
 
@@ -51,7 +56,7 @@ const props = defineProps({
         <span class="date">{{ date }}</span>
       </div>
       <p class="card-description">{{ description }}</p>
-      <button class="read-more">Read More</button>
+      <button class="read-more" @click="navigateToArticle">Read More</button>
     </div>
   </div>
 </template>

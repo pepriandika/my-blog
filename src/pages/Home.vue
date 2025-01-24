@@ -1,6 +1,4 @@
 <script setup>
-// import { useRouter } from 'vue-router';
-
 import ArticleCard from "@/components/ArticleCard.vue"; // Import router hook
 import Articles from "@/assets/Articles.json";
 import Search from "@/components/sidebar/Search.vue";
@@ -8,13 +6,10 @@ import AboutMe from "@/components/sidebar/AboutMe.vue";
 import RecentPost from "@/components/sidebar/RecentPost.vue";
 import Category from "@/components/sidebar/Category.vue";
 
+//outputnya tipe data object
 const articles = Articles;
 
-// const router = useRouter();
-
-// const navigateToPost = (id) => {
-//   router.push(`/post/${id}`); // Navigasi ke halaman lain
-// };
+console.log(typeof articles)
 
 </script>
 
@@ -33,7 +28,6 @@ const articles = Articles;
             :category="article.category"
             :description="article.description"
             :id="article.id"
-            @click="navigateToPost(article.id)"
         />
       </v-col>
       <v-col cols="3">
